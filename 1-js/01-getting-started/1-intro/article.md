@@ -1,120 +1,120 @@
-# An Introduction to JavaScript
+# Bevezetés a JavaScriptbe
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+Miért különleges a JavaScript? Mi mindent tudunk megvalósítani vele? Milyen technológiai megoldások lehetségesek a használatával? Ezeket a kérdéseket válaszoljuk meg a következőkben.
 
-## What is JavaScript?
+## Mi az a JavaScript?
 
-*JavaScript* was initially created to "make web pages alive".
+A *JavaScriptet* eredetileg azért alkották meg, hogy "életre keltse" a weboldalakat.
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+A JavaScript nyelven írt programokat *szkripteknek* (*script*) nevezzük. Közvetlenül a weboldalak HTML kódjába írhatóak, ahol automatikusan lefutnak az oldal betöltése során.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+A szkripteket egyszerű szövegként írjuk, semmiféle különleges előkészítést, *fordítást* (*compiling*) nem igényelnek.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+A JavaScript e tekintetben lényegesen különbözik a [Java](https://hu.wikipedia.org/wiki/Java_(programozási_nyelv)) programozási nyelvtől.
 
-```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+```smart header="Miért nevezik <u>Java</u>Scriptnek?"
+A születésekor még a LiveScript nevet viselte, de mivel akkoriban a Java igen népszerű volt, úgy döntöttek, hogy megpróbálják annak "kistestvéreként" pozicionálni.
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+Később, ahogy a nyelv fejlődött, teljesen függetlenné vált, önálló specifikációval, amit [ECMAScriptnek](https://hu.wikipedia.org/wiki/ECMAScript) neveznek. A JavaScriptnek tehát semmi köze a Java nyelvhez.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Mára már nem csak a böngészőben futtathatunk JavaScriptet, hanem a szervereken is, sőt, tulajdonképpen bármilyen eszközön, amely képes egy úgynevezett [JavaScript-motor](https://hu.wikipedia.org/wiki/JavaScript-motor) futtatására.
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+A böngészőkbe épített JavaScript-motort *JavaScript virtuális gépnek* is szokás hívni.
 
-Different engines have different "codenames". For example:
+A különböző böngészőkbe épített motoroknak mind saját kódneve van, például:
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Trident" and "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+- [V8](https://hu.wikipedia.org/wiki/V8_JavaScript-motor) -- Chrome és Opera.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- Firefox.
+- ...és még egy sor másik, úgymint "Trident" és "Chakra" a különböző Internet Explorer verziókban, "ChakraCore" a Microsoft Edgeben, vagy a "Nitro" és "SquirrelFish" a Safariban.
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+Jó, ha ismerjük a fenti fogalmakat, ugyanis vissza fognak köszönni a fejlesztőknek szánt cikkekben, például amikor arról van szó, hogy egy funkció támogatott-e a V8 által.
 
-```smart header="How do engines work?"
+```smart header="Hogy működnek a JavaScript-motorok?"
 
-Engines are complicated. But the basics are easy.
+Habár a JavaScript-motorok összetettek, az alapvető működésük igen egyszerű.
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
+1. A motor beolvassa és kielemzi a szkriptet (*parsing*, *elemzés*).
+2. Átalakítja a kódot gépi kódra (*compiling*, *fordítás*).
+3. A gépi kód lefut.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+A motor különféle optimalizációkat hajt végre a lépések során, sőt, a lefordított kódot is monitorozza futás közben, hogy dinamikusan tovább optimalizálja a gépi kódot.
 ```
 
-## What can in-browser JavaScript do?
+## Mire képes a böngészőben futó JavaScript?
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+A JavaScript egy "biztonságos" nyelv, nem ad hozzáférést olyan alacsonyszintű erőforrásokhoz, mint a processzor vagy a memória, mivel eredetileg kizárólag a böngészőkben való futásra szánták, s ott ezekre nincs szükség.
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+Egy JavaScript program lehetőségeit nagyban befolyásolja a környezet, amelyben fut. [Node.js](https://hu.wikipedia.org/wiki/Node.js) esetén például tetszőlegesen írhatunk/olvashatunk fájlokat, kezdeményezhetünk hálózati hívásokat.
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+Ezzel szemben egy böngészőben futó JavaScript programmal manipulálhatjuk a weboldalt, reagálhatunk a felhasználó ténykedéseire, kommunikálhatunk a weboldalt kiszolgáló webszerverrel. 
 
-For instance, in-browser JavaScript is able to:
+Néhány konkrét példa:
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- HTML elemek létrehozása, tartalom és formázás módosítása.
+- Kattintásra, egér mozgatásra, billentyű leütésre történő reagálás.
+- Kommunikáció távoli szerverekkel, fájlok letöltése és feltöltése ([AJAX](https://hu.wikipedia.org/wiki/Ajax_(programozás)) és [COMET](https://hu.wikipedia.org/wiki/Comet).
+- Sütik beállítása és lekérése, üzenetek és kérdések megjelenítése.
+- Adatok tárolása kliens oldalon ("local storage", azaz helyi tárban).
 
-## What CAN'T in-browser JavaScript do?
+## Mire NEM képes a böngészőben futó JavaScript?
 
-JavaScript's abilities in the browser are limited for the sake of the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+A böngészőben futó JavaScript, a felhasználó érdekében, több szempontból is korlátozva van. A cél az adatainkhoz való illetéktelen hozzáférés megakadályozása.
 
-Examples of such restrictions include:
+Például:
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+- A weboldalakon futó JavaScript programok nem férnek hozzá az operációs rendszer szolgáltatásaihoz, nem tudnak tetszőlegesen fájlokat írni/olvasni.
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+    A modern böngészők korlátozottan és csakis a felhasználó közreműködésével képesek bizonyos fájlműveletekre, például fájlfeltöltésre egy `<input>` HTML elemen keresztül.
 
-    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+    A webkamera és a mikrofon, a felhasználó kifejezett engedélyével, elérhetőek, de engedély nélkül, alattomosan, nem férhet hozzájuk egyetlen weboldal sem, így nem kell aggódnunk, hogy adataink ezeken keresztül eljutnának az [NSA](https://hu.wikipedia.org/wiki/National_Security_Agency)-hez.
+- A böngészőfülek és ablakok alapesetben nem tudnak kommunikálni egymással. Erre csak abban az esetben van lehetőség, ha egy weboldalon futó JavaScript nyit meg egy új fület vagy ablakot, de még ebben az esetben is csak azzal a feltétellel, hogy a megnyitott oldal ugyanarról a webcímről származik (azaz a protokoll, a kiszolgáló és a port is megegyezik).
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and contain a special JavaScript code that handles it. We'll cover that in the tutorial.
+    Ez a korlátozás a Same Origin Policy (SOP), vagyis az "azonos eredet szabálya". A szabály feloldásához *mindkét* weboldalnak engedélyeznie kell az adatátvitelt, illetve maga a kommunikáció is speciális JavaScript kódot igényel -- erre a későbbiek során fogunk példát látni.
 
-    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+    Ez a szabály szintén a felhasználót védi, ugyanis így az egyik fülön megnyitott `http://tetszoleges-weboldal.com` nem fér hozzá az egy másik fülön megnyitott `http://gmail.com` oldalon a levelekhez.
+- A weboldalakon futó JavaScript minden további nélkül képes kommunikálni azzal a kiszolgálóval, amelyikről betöltődött, de a más kiszolgálókkal történő kommunikáció különleges eljárásokat igényel a kiszolgáló oldalán. Ez ismét egy fontos biztonsági korlátozás.
 
 ![](limitations.svg)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
+Ezek a korlátozások nem léteznek a böngészőn kívül, így például a szervereken. Ezeken túlmenően, a modern böngészőkbe különféle bővítményeket telepíthetünk, amelyek további engedélyeket igényelhetnek. 
 
-## What makes JavaScript unique?
+## Mi teszi a JavaScriptet különlegessé?
 
-There are at least *three* great things about JavaScript:
+*Három* érv a JavaScript mellett:
 
 ```compare
-+ Full integration with HTML/CSS.
-+ Simple things are done simply.
-+ Support by all major browsers and enabled by default.
++ Teljeskörű HTML/CSS integráció.
++ Az egyszerű dolgok kivitelezése egyszerű.
++ Minden modern böngésző támogatja és alapértelmezetten engedélyezi a futtatását.
 ```
-JavaScript is the only browser technology that combines these three things.
+A JavaScript az egyetlen böngésző-technológia, amely mindhárom előnnyel rendelkezik.
 
-That's what makes JavaScript unique. That's why it's the most widespread tool for creating browser interfaces.
+Ezért olyan különleges a JavaScript és ezért terjedhetett el és válhatott a felhasználói felületek kivitelezésének elsőszámú eszközévé.
 
-That said, JavaScript also allows to create servers, mobile applications, etc.
+Ezzel együtt a JavaScript kiválóan alkalmas szerverek programozására, mobilalkalmazások fejlesztésére és még sok minden másra is.
 
-## Languages "over" JavaScript
+## JavaScriptre épülő nyelvek
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+A JavaScript szintaxisa nem felel meg és nem is felelhet meg mindenki elvárásainak, ugyanis az egyes fejlesztőknek eltérőek az igényeik.
 
-That's to be expected, because projects and requirements are different for everyone.
+Ez természetes, hiszen a projektek és a követelmények is eltérőek.
 
-So recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+A JavaScript megjelenése óta egy sor nyelv bukkant fel, amelyeket JavaScriptté kell alakítani (*transpiling*), mielőtt le tudnánk futtatni a programot böngészőben.
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
+A modern fejlesztői eszközök rendkívül gyorsak és transzparensek, így lényegében a JavaScripttől teljesen eltérő nyelven is kódolhatunk, miközben az automatikusan JavaScriptté alakul a háttérben.
 
-Examples of such languages:
+Néhány példa:
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
-- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [CoffeeScript](http://coffeescript.org/): úgynevezett *szintaktikai cukorkákat* (*syntactic sugar*) alkalmazó nyelv. Tömörebb szintaxissal rendelkezik, így világosabb és rövidebb kódot írhatunk. A Ruby fejlesztők jellemzően kedvelik.
+- [TypeScript](http://www.typescriptlang.org/): elsősorban szigorú típusossággal egészíti ki a JavaScriptet, elősegítve a nagy bonyolultságú rendszerek fejlesztését és karbantartását. A Microsoft fejlesztése.
+- [Flow](http://flow.org/): szintén a szigorúbb típusosságot valósítja meg, de a TypeScripttől eltérő módon. A Facebook fejlesztése.
+- [Dart](https://www.dartlang.org/): önálló nyelv, saját, böngészőn kívüli motorral. JavaScriptté alakítható. A Google fejlesztése.
 
-There are more. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
+A fentieken túl számos más JavaScripten alapuló nyelv létezik. Még akkor is, ha egy JavaScriptté alakítandó nyelvvel dolgozunk, mindenképpen érdemes alaposan ismerni a JavaScriptet, hogy valóban értsük, hogyan működik a programunk.
 
-## Summary
+## Összefoglalás
 
-- JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+- A JavaScriptet eredetileg kizárólag böngészőben való futtatásra szánták, mára azonban számtalan egyéb környezetben alkalmazzák.
+- A JavaScript egyedülálló helyzetben van a legszélesebb körben elterjedt böngészőoldali programozási nyelvként, teljeskörű HTML és CSS integrációval.
+- Számos JavaScriptre forduló nyelv létezik. Érdemes megismerkedni velük, miután magabiztos JavaScript tudásra tettünk szert.
