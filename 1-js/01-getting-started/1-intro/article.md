@@ -1,6 +1,10 @@
 # Bevezetés a JavaScriptbe
 
+<<<<<<< HEAD
 Miért különleges a JavaScript? Mi mindent tudunk megvalósítani vele? Milyen technológiai megoldások lehetségesek a használatával? Ezeket a kérdéseket válaszoljuk meg a következőkben.
+=======
+Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
 ## Mi az a JavaScript?
 
@@ -73,8 +77,13 @@ Például:
 
     A modern böngészők korlátozottan és csakis a felhasználó közreműködésével képesek bizonyos fájlműveletekre, például fájlfeltöltésre egy `<input>` HTML elemen keresztül.
 
+<<<<<<< HEAD
     A webkamera és a mikrofon, a felhasználó kifejezett engedélyével, elérhetőek, de engedély nélkül, alattomosan, nem férhet hozzájuk egyetlen weboldal sem, így nem kell aggódnunk, hogy adataink ezeken keresztül eljutnának az [NSA](https://hu.wikipedia.org/wiki/National_Security_Agency)-hez.
 - A böngészőfülek és ablakok alapesetben nem tudnak kommunikálni egymással. Erre csak abban az esetben van lehetőség, ha egy weboldalon futó JavaScript nyit meg egy új fület vagy ablakot, de még ebben az esetben is csak azzal a feltétellel, hogy a megnyitott oldal ugyanarról a webcímről származik (azaz a protokoll, a kiszolgáló és a port is megegyezik).
+=======
+    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+- Different tabs/windows generally do not know about each other. Sometimes they do; for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
     Ez a korlátozás a Same Origin Policy (SOP), vagyis az "azonos eredet szabálya". A szabály feloldásához *mindkét* weboldalnak engedélyeznie kell az adatátvitelt, illetve maga a kommunikáció is speciális JavaScript kódot igényel -- erre a későbbiek során fogunk példát látni.
 
@@ -129,6 +138,12 @@ A fentieken túl számos más JavaScripten alapuló nyelv létezik. Még akkor i
 
 ## Összefoglalás
 
+<<<<<<< HEAD
 - A JavaScriptet eredetileg kizárólag böngészőben való futtatásra szánták, mára azonban számtalan egyéb környezetben alkalmazzák.
 - A JavaScript egyedülálló helyzetben van a legszélesebb körben elterjedt böngészőoldali programozási nyelvként, teljeskörű HTML és CSS integrációval.
 - Számos JavaScriptre forduló nyelv létezik. Érdemes megismerkedni velük, miután magabiztos JavaScript tudásra tettünk szert.
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration in HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
