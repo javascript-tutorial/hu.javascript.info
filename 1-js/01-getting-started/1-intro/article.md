@@ -1,6 +1,10 @@
 # Bevezetés a JavaScriptbe
 
+<<<<<<< HEAD
 Miért különleges a JavaScript? Mi mindent tudunk megvalósítani vele? Milyen technológiai megoldások lehetségesek a használatával? Ezeket a kérdéseket válaszoljuk meg a következőkben.
+=======
+Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+>>>>>>> 2d5be7b7307b0a4a85e872d229e0cebd2d8563b5
 
 ## Mi az a JavaScript?
 
@@ -129,6 +133,12 @@ A fentieken túl számos más JavaScripten alapuló nyelv létezik. Még akkor i
 
 ## Összefoglalás
 
+<<<<<<< HEAD
 - A JavaScriptet eredetileg kizárólag böngészőben való futtatásra szánták, mára azonban számtalan egyéb környezetben alkalmazzák.
 - A JavaScript egyedülálló helyzetben van a legszélesebb körben elterjedt böngészőoldali programozási nyelvként, teljeskörű HTML és CSS integrációval.
 - Számos JavaScriptre forduló nyelv létezik. Érdemes megismerkedni velük, miután magabiztos JavaScript tudásra tettünk szert.
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration in HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 2d5be7b7307b0a4a85e872d229e0cebd2d8563b5
