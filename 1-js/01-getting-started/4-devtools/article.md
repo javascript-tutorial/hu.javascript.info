@@ -1,4 +1,4 @@
-# A developer Console
+# A developer console
 
 A kód hajlamos az hibákra. Te magad is elég nagy valószínűséggel fogsz hibákat ejteni a kódban... Sőt, szinte *biztos* hogy te is fogsz hibákat ejteni, amennyiben ember vagy, és nem csak egy [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
