@@ -1,63 +1,63 @@
-# Developer console
+# Fejlesztői Console
 
-Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+A kód hajlamos az hibákra. Te magad is elég nagy valószínűséggel fogsz hibákat ejteni a kódban... Sőt, szinte *biztos* hogy te is fogsz hibákat ejteni, amennyiben ember vagy, és nem egy robot. [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-But in the browser, users don't see errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
+De a böngészőben alapból nem látjuk a hibákat. Tehát ha a szkriptben (script) valami probléma van nem fogjuk látni, és nem tudjuk majd mit kéne megjavítani.
 
-To see errors and get a lot of other useful information about scripts, "developer tools" have been embedded in browsers.
+Ahoz, hogy lássuk a hibákat, és egyéb hasznos információkat kaphassunk szkriptjeinkről, a böngészők beépítétettek valamit, amit mi "Developer Toolsnak", azaz fejlesztői sgédeszközöknek nevezünk.
 
-Most developers lean towards Chrome or Firefox for development because those browsers have the best developer tools. Other browsers also provide developer tools, sometimes with special features, but are usually playing "catch-up" to Chrome or Firefox. So most developers have a "favorite" browser and switch to others if a problem is browser-specific.
+A legtöbb fejlesztő a Chrome és a Firefox mellett áll, ha fejlesztésről van szó, mivel azok rendelkeznek a legjobb fejlesztői segédeszközökkel. Egyéb böngészők is kínálnak a Chrome és a Firfoxéhoz hasonló fejlesztői segédeszközöket, de az estek nagy részében, közelről sem olyan jók az előbbieknek. A legtöbb fejlesztőnek van egy kedvenc böngészője, és egy másikra váltanak ha csak egy bizonyos böngészőre exkluzív (browser-specific) problémát találnak.
 
-Developer tools are potent, they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+A fejlesztői segédeszközök szinte nélkülözhetetlenek, tekintve a sok hasznos funkciót amit kínálnak. Először azt fogjukmegtanulni, hogy ezeket az eszközöket hogyan nyissuk meg, hogyan keressünk vele hibákat és futtassunk benne JavaScript parancsokat.
 
 ## Google Chrome
 
-Open the page [bug.html](bug.html).
+Nyisd meg a [bug.html](bug.html) oldalt.
 
-There's an error in the JavaScript code on it. It's hidden from a regular visitor's eyes, so let's open developer tools to see it.
+Ezen az oldalon, a látogató szemei elől rejtve található egy hiba, úgyhogy nyissuk meg a fejlesztői segédeszközöket és nézzük meg mi lehet ez a hiba!
 
-Press `key:F12` or, if you're on Mac, then `key:Cmd+Opt+J`.
+Nyomd meg a `F12` gombot, vagy ha Mac rendszert használasz, akkor a `Cmd+Opt+J`-t, hogy megnyisd a fejlesztői segédeszközök ablakot..
 
-The developer tools will open on the Console tab by default.
+A fejlesztői segédeszközök ablak alabból a console résznél fog megnyílni.
 
-It looks somewhat like this:
+Az utóbbinak, ha minden igaz így kell kinéznie:
 
 ![chrome](chrome.png)
 
-The exact look of developer tools depends on your version of Chrome. It changes from time to time but should be similar.
+A fejlesztői segédeszközök ablaknak a pontos kinézete Chrome verziótól függően változhat, de ha minden igaz ehez hasonlóan kéne hogy kinézzen.
 
-- Here we can see the red-colored error message. In this case, the script contains an unknown "lalala" command.
-- On the right, there is a clickable link to the source `bug.html:12` with the line number where the error has occurred.
+- Itt láthatjuk piros színnel jelölve a hibaüzenetet. Ebben az esetben a hiba szerint a szkriptünk tartalmaz egy ismeretlen "lalala" nevű parancsot.
+- A jobb oldalon láthatunk egy klikkelhető linket `bug.html:12` néven. Ebben a linkben a `bug.html` a fájlnak a neve ahol a hiba van és a `:12` az annak a sornak a száma amiben a hibát okozó parancs van.
 
-Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them.
+A hibaüzenet alatt található kék `>` szimbólum az a parancssort azaz a "command line"-t jelzi ahova parancsokat írhatunk be, amit aztán az `Enter` billentyű használatatával futtathatunk.
 
-Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
+Most, hogy látjuk a hibákat, egyelőre megállhatunk itt. Később még visszatérünk a fejlesztői segédeszközökhöz, és majd még mélyebbre merülünk a hibák elhárításában egy következő fejezetben <info:debugging-chrome>.
 
 ```smart header="Multi-line input"
-Usually, when we put a line of code into the console, and then press `key:Enter`, it executes.
+Alapból, ha beírunk egy sor kódot a consoleba és megnyomjuk az Enter gombot, a parancs rögtön le is fut.
 
-To insert multiple lines, press `key:Shift+Enter`. This way one can enter long fragments of JavaScript code.
+Ahoz hogy több sornban írjunk, nyomd meg a `Shift+Enter` gombkombinációt. Ez úton egy nagyabb adag JavaScript kódot is kénylemesen be lehet gépelni.
 ```
 
-## Firefox, Edge, and others
+## Firefox, Edge, és egyéb ezekhez hasonló böngészők
 
-Most other browsers use `key:F12` to open developer tools.
+A böngészők nagyrészénél az `F12` gomb lenyomásával lehet megnyitni a fejlesztői segédeszközök ablakot.
 
-The look & feel of them is quite similar. Once you know how to use one of these tools (you can start with Chrome), you can easily switch to another.
+A kinézetük, felületük és használatuk legtöbbször nagyon hasonló, ezért ha az egyik böngészőjét megtanultad használni, a többi is már viszonylag könnyen fog menni.
 
 ## Safari
 
-Safari (Mac browser, not supported by Windows/Linux) is a little bit special here. We need to enable the "Develop menu" first.
+Safari, a Mac saját (Windows/Linux által nem támogatott) böngészője ezen a téren kicsit kiáll a sorból. Itt először saját magunkan kell bekapcsolnunk a fejlesztői menüt, más néven a "Develop Menü"-ot
 
-Open Preferences and go to the "Advanced" pane. There's a checkbox at the bottom:
+Nyisd meg a preferenciák (Preferences) menüt, majd nyomj rá az "Advanced" menüpontra, aminek az alján fogsz látni egy kicsi jelölőnégyzetet, amit be is pipálhatunk.
 
 ![safari](safari.png)
 
-Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu item named "Develop" has appeared. It has many commands and options.
+Mostmár a `Cmd+Opt+C` gombkombinációval végre megnyithatjuk a consolet! Emellett, még észrevehető változás, hogy egy "Develop" névre hallgató fenti menüpont megjelent. Az utóbbiban még több hasznos funkciót tufunk majd elérni!
 
-## Summary
+## Összesítés
 
-- Developer tools allow us to see errors, run commands, examine variables, and much more.
-- They can be opened with `key:F12` for most browsers on Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
+- A fejlesztői segédeszközök sok dologban segítenek. Ezek között van például a hibák megtekintése és javítása, parancsok futtatása és még sok minden más is!
+- Windowson a legtöbb böngészőben az `F12`, a Macre való Chromeban a `Cmd+Opt+J`-vel, a Safariban pedig a `Cmd+Opt+C` gombokkal nyithatjuk meg (az utóbbiban először a beállításokban be kell kapcsolni).
 
-Now we have the environment ready. In the next section, we'll get down to JavaScript.
+Most, hogy a fejlesztői környezetünk készen áll, nekiállhatunk a JavaScript használatához!
