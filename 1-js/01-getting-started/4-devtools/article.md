@@ -2,7 +2,7 @@
 
 A kód hajlamos az hibákra. Te magad is elég nagy valószínűséggel fogsz hibákat ejteni a kódban... Sőt, szinte *biztos* hogy te is fogsz hibákat ejteni, amennyiben ember vagy, és nem csak egy [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-De a böngészőben alapból nem látjuk a hibákat. Tehát ha a szkriptben (script) valami probléma van nem fogjuk látni, és nem tudjuk majd mit kéne megjavítani.
+A probléma az, hogy a böngészőkben alapból nem látjuk a hibákat, tehát ha a szkriptben (script) valami probléma van nem fogjuk látni, és nem tudjuk majd mit kéne megjavítani.
 
 Ahoz, hogy lássuk a hibákat, és egyéb hasznos információkat kaphassunk szkriptjeinkről, a böngészők beépítétettek valamit, amit mi "Developer Toolsnak", azaz fejlesztői sgédeszközöknek nevezünk.
 
