@@ -1,6 +1,6 @@
 # A developer console
 
-A kód hajlamos az hibákra. Te magad is elég nagy valószínűséggel fogsz hibákat ejteni a kódban... Sőt, szinte *biztos* hogy te is fogsz hibákat ejteni, amennyiben ember vagy, és nem csak egy [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+A kód hajlamos a hibákra. Te magad is elég nagy valószínűséggel fogsz hibákat ejteni a kódban... Sőt, szinte *biztos* hogy te is fogsz hibákat ejteni, amennyiben ember vagy, és nem csak egy [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
 A probléma az, hogy a böngészőkben alapból nem látjuk a hibákat, tehát ha a szkriptben (script) valami probléma van nem fogjuk látni, és nem tudjuk majd mit kéne megjavítani.
 
