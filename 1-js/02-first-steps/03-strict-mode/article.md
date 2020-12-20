@@ -1,89 +1,89 @@
-# The modern mode, "use strict"
+# A modern mód, "use strict"
 
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+Egy hosszú ideig a JavaScript kompatibilitási hibák nélkül fejlődött. Új dolgok funkciók folyamatosan jöttek be, a régiek viszont sosem változtak.
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
+Ennek nagy előnye volt, hogy a kódot bármikor is írták mindig helytálló maradt, ám viszont azzal hogy a régi dolgok sosem változtak azzal az a nagy baj, hogy bármilyen imperfekciót is ejtettek a JavaScript készítői, az örökre a nyelvben ragadt.
 
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: `"use strict"`.
+Ez volt a helyzet, míg 2009-ben meg nem jelent az ECMAScript 5 (ES5). Az ES5 sok új funkciót hozott a JS-be és sok régit is megváltoztatott. Ahoz hogy a régi kód továbbá is működőképes maradhasson, ezeknek a változtatásoknak nagy részét alapból kikapcsolták. Ezeket a funciókat egy különleges diretívával kapcsolhattad be, a `"use strict"`-el.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
+Ez a direktíva pontosan úgy néz ki mint egy átlagos szöveg: `"use strict"`, vagy `'use strict'`. Mikor ezt a direktívát a szkript tetejére hejezed, akkor az a szkriptet arra utasítja, hogy a "modern módon" működjön.
 
-For example:
+Példa:
 
 ```js
 "use strict";
 
-// this code works the modern way
+// ez a kód a modern úton fog működni
 ...
 ```
 
-Quite soon we're going to learn functions (a way to group commands), so let's note in advance that `"use strict"` can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.
+Nemsokára külön tanulni fogunk a függvényekről (egy mód parancsok csoportosítására), de előre lefektethetjük, hogy a `"use strict"`-et tudjuk használni függvények elején. Ezzel azt érhetjük el, hogy csak azon a függvényen belül fusson modern módon a kód. De általában az egész szkriptre szokták használni a `"use strict"`-et.
 
-````warn header="Ensure that \"use strict\" is at the top"
-Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
+````warn header="Győződj meg róla, hogy a \"use strict\" mindig a szkript tetején van!"
+Fontos, hogy a `"use strict"` **mindig** a szkript elején legyen, különben a modern mód nem lesz bekapcsolva.
 
-Strict mode isn't enabled here:
+Ebben a példában a `"use strict" hibás elhelyezkedése miatt a modern mód nem lesz bekapcsolva`:
 
 ```js no-strict
 alert("some code");
-// "use strict" below is ignored--it must be at the top
+// a "use strict"-et ignorálja a kód, hacsak nem a szkript, vagy egy függvény legelején van.
 
 "use strict";
 
-// strict mode is not activated
+// a strict mode ki van kapcsolva
 ```
 
-Only comments may appear above `"use strict"`.
+A `"use strict"` felé csak kommenteket szabad tenni.
 ````
 
-```warn header="There's no way to cancel `use strict`"
-There is no directive like `"no use strict"` that reverts the engine to old behavior.
+```warn header="A `use strict`-et nem lehet utólag kikapcsolni"
+Nincsen olyasmi direktíva, mint például egy `"no use strict"`, ami visszaállítani a motort a régi viselkedési módra.
 
-Once we enter strict mode, there's no going back.
+Ha egyszer bekapcsoltad a strict modeot, nincs visszaút.
 ```
 
-## Browser console
+## Használat a böngészők konzoljain belül
 
-When you use a [developer console](info:devtools) to run code, please note that it doesn't `use strict` by default.
+Ha a [fejlesztői consolet](info:devtools) használod kód futtatására, akkor fontos, hogy az alapból nem használ `strict mode`-ot.
 
-Sometimes, when `use strict` makes a difference, you'll get incorrect results.
+Bizonyos alkalmakkor, amikor a `use strict` különbséget tesz, akkor nem kívánt eredményeket kaphatsz.
 
-So, how to actually `use strict` in the console?
+De, akkor hogyan is használjuk helyesen a `use strict`-et a consoleban?
 
-First, you can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+Először is, megpróbálhatod a `Shift+Enter` gombok lenyomásával több sorba írni a kódot, majd az egész legetetejére odatenni a `use strict`-et. Az utóbbi valahogy így fog kinézni:
 
 ```js
-'use strict'; <Shift+Enter for a newline>
-//  ...your code
-<Enter to run>
+'use strict'; <Shift+Enter, hogy új sort kezdj>
+//  ...a kódod
+<Nyomd meg az entert a futtatáshoz>
 ```
 
-It works in most browsers, namely Firefox and Chrome.
+Ez a legtöbb böngészőben (mint például a Chrome vagy a Firefox) működik.
 
-If it doesn't, e.g. in an old browser, there's an ugly, but reliable way to ensure `use strict`. Put it inside this kind of wrapper:
+Ha esetleg mégse (például egy régi böngészőben), akkor van egy csúnya, de megbízható megoldsé a `use strict` használatára. Egy ilyesmi kód blokkra lesz szükségünk:
 
 ```js
 (function() {
   'use strict';
 
-  // ...your code here...
+  // ...a kód hátralévő része...
 })()
 ```
 
-## Should we "use strict"?
+## Használjuk-e a "use strict"-et?
 
-The question may sound obvious, but it's not so.
+Ez a kérdés, míg először eléggé egyértelműnek hangzik, a valóságban nem az.
 
-One could recommend to start scripts with `"use strict"`... But you know what's cool?
+Ugye, azt egyesek azt ajánlanák, hogy használd előszeretettel a `"use strict"`-et ...De tudod mi itt a menő dolog?
 
-Modern JavaScript supports "classes" and "modules" - advanced language structures (we'll surely get to them), that enable `use strict` automatically. So we don't need to add the `"use strict"` directive, if we use them.
+A modern JavaScript támogat olyanokat mint például a "class"-ek és a "module"-ok (majd azokat is tanulni fogjuk), amik automatikusan engedélyezik a `"use strict"`-et. Tehát ha ilyenekn vannak a kódunkban, a `"use strict"`-et nyugodtan nélkülözhetjük.
 
-**So, for now `"use strict";` is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.**
+**Tehát egyelőre a `"use strict";` az csak egy kis extra a szkriptjeink elején. Később, amikor a kódunk tele lesz modulokkal és classokkal, már nyugodtan kihagyhatjuk a `"use strict"`-et.**
 
-As of now, we've got to know about `use strict` in general.
+Jelenleg, az alapok miatt jó tudni a `use strict` létezéséről.
 
-In the next chapters, as we learn language features, we'll see the differences between the strict and old modes. Luckily, there aren't many and they actually make our lives better.
+A következő fejezetekben tanulunk majd egy kicsit a nyelvi funckiókról és az új és régi módok közti különbségekről. Szerencsénkre az utóbbiakból nincsen sok, és azok amik vannak azok is csak a mi dolgunkat fogják könnyíteni.
 
-All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+Az ebben a fejezetben lévő példák mind elvárják a "strict" mode használatát, hacsak ennek az állításnak hamisságát nem fejeztük ki előre.
