@@ -82,7 +82,7 @@ A modern JavaScript támogat olyanokat mint például a "class"-ek és a "module
 
 **Tehát egyelőre a `"use strict";` az csak egy kis extra a szkriptjeink elején. Később, amikor a kódunk tele lesz modulokkal és classokkal, már nyugodtan kihagyhatjuk a `"use strict"`-et.**
 
-Jelenleg, az alapok miatt jó tudni a `use strict` létezéséről.
+Jelenleg, az alapok miatt jó tudni a `use strict` létezéséről. 
 
 A következő fejezetekben tanulunk majd egy kicsit a nyelvi funckiókról és az új és régi módok közti különbségekről. Szerencsénkre az utóbbiakból nincsen sok, és azok amik vannak azok is csak a mi dolgunkat fogják könnyíteni.
 
