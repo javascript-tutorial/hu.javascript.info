@@ -1,4 +1,4 @@
-# A modern mód, "use strict"
+# A modern mode, "use strict"
 
 Egy hosszú ideig a JavaScript kompatibilitási hibák nélkül fejlődött. Új dolgok funkciók folyamatosan jöttek be, a régiek viszont sosem változtak.
 
