@@ -39,7 +39,7 @@ Alapból, ha beírunk egy sor kódot a consoleba és megnyomjuk az Enter gombot,
 Ahoz hogy több sorban írjunk, nyomd meg a `Shift+Enter` gombokat. Ez úton egy nagyabb adag JavaScript kódot is kényelemesen be lehet gépelni.
 ```
 
-## Firefox, Edge, és egyéb ezekhez hasonló böngészők
+## Firefox, Edge, és egyéb böngészők
 
 A böngészők nagyrészénél az `F12` gomb lenyomásával lehet megnyitni a Developer Tools ablakot.
 
