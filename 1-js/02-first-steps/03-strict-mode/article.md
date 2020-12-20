@@ -1,6 +1,6 @@
 # A modern mode, "use strict"
 
-Egy hosszú ideig a JavaScript kompatibilitási hibák nélkül fejlődött. Új dolgok funkciók folyamatosan jöttek be, a régiek viszont sosem változtak.
+Egy hosszú ideig a JavaScript kompatibilitási hibák nélkül fejlődött. Új funkciók gyakran jelentek meg, ám a régiek viszont sosem változtak.
 
 Ennek nagy előnye volt, hogy a kódot bármikor is írták mindig helytálló maradt, ám viszont azzal hogy a régi dolgok sosem változtak azzal az a nagy baj, hogy bármilyen imperfekciót is ejtettek a JavaScript készítői, az örökre a nyelvben ragadt.
 
