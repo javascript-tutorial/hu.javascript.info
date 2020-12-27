@@ -1,46 +1,46 @@
-# Code editors
+# Kódszerkesztők
 
-A code editor is the place where programmers spend most of their time.
+A programozók a munkájuk jelentős részét (forrás)kódszerkesztők segítségével végzik.
 
-There are two main types of code editors: IDEs and lightweight editors. Many people use one tool of each type.
+A kódszerkesztőknek két nagy csoportja van: az integrált fejlesztői környezetek (*integrated development environment, IDE*) és az egyszerű szerkesztők, s a feladattól függően választhatjuk egyiket vagy másikat.
 
 ## IDE
 
-The term [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) refers to a powerful editor with many features that usually operates on a "whole project." As the name suggests, it's not just an editor, but a full-scale "development environment."
+Az [integrált fejlesztői környezetek](https://hu.wikipedia.org/wiki/Integrált_fejlesztői_környezet) az egyszerű kódszerkesztésen túl számos fejlesztést segítő funkcióval bírnak. Ahogy a nevük is sugallja, a szerkesztőkhöz képest bonyolultabb szoftverekről van szó.
 
-An IDE loads the project (which can be many files), allows navigation between files, provides autocompletion based on the whole project (not just the open file), and integrates with a version management system (like [git](https://git-scm.com/)), a testing environment, and other "project-level" stuff.
+Egy IDE segítségével egész projektre vonatkozó műveleteket végezhetünk. Segíti navigálni a fájlok között, kódkiegészítést biztosít, valamint beépítetten támogatja a projekt verziókövetését és tesztelését.
 
-If you haven't selected an IDE yet, consider the following options:
+Néhány figyelemreméltó IDE:
 
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [WebStorm](http://www.jetbrains.com/webstorm/) (cross-platform, paid).
+- [Visual Studio Code](https://code.visualstudio.com/) (patformfüggetlen, ingyenes).
+- [WebStorm](http://www.jetbrains.com/webstorm/) (platformfüggetlen, fizetős).
 
-For Windows, there's also "Visual Studio", not to be confused with "Visual Studio Code". "Visual Studio" is a paid and mighty Windows-only editor, well-suited for the .NET platform. It's also good at JavaScript. There's also a free version [Visual Studio Community](https://www.visualstudio.com/vs/community/).
+Nem keverendő össze a "Visual Studio Code" és a "Visual Studio". Utóbbi egy kizárólag Windowson elérhető, fizetős IDE, elsősorban .NET fejlesztésre. Ezzel együtt JavaScript programozásra is alkalmas, sőt, [Visual Studio Community](https://www.visualstudio.com/vs/community/) néven elérhető egy ingyenes változata is.
 
-Many IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developer's salary, so just choose the best one for you.
+Számos IDE fizetős, de jellemzően ingyenesen kipróbálhatóak, az áruk pedig elhanyagolható egy professzionális fejlesztői bérhez képest. Az igényeinknek legmegfelelőbb IDE-t válasszuk!
 
-## Lightweight editors
+## Egyszerű kódszerkesztők
 
-"Lightweight editors" are not as powerful as IDEs, but they're fast, elegant and simple.
+Az egyszerű kódszerkesztők kevesebb funkcióval bírnak, de cserébe villámgyorsak és egyszerűen kezelhetőek.
 
-They are mainly used to open and edit a file instantly.
+Elsősorban egy-egy fájl gyors szerkesztésére valóak.
 
-The main difference between a "lightweight editor" and an "IDE" is that an IDE works on a project-level, so it loads much more data on start, analyzes the project structure if needed and so on. A lightweight editor is much faster if we need only one file.
+A legszembetűnőbb különbség, hogy az IDE-k a futás során projekt szinten elemzik a teljes kódbázist, míg az egyszerű szerkesztők csak a megnyitott fájl szerkesztését segítik.
 
-In practice, lightweight editors may have a lot of plugins including directory-level syntax analyzers and autocompleters, so there's no strict border between a lightweight editor and an IDE.
+A gyakorlatban számos bővítmény (*plugin*, *extension*) áll rendelkezésre a kódszerkesztők kiegészítésére, így az IDE-k és a szerkesztők közötti határvonal képlékeny.
 
-The following options deserve your attention:
+Néhány figyelemreméltó kódszerkesztő:
 
-- [Atom](https://atom.io/) (cross-platform, free).
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
-- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
-- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+- [Atom](https://atom.io/) (platformfüggetlen, ingyenes).
+- [Visual Studio Code](https://code.visualstudio.com/) (platformfüggetlen, ingyenes).
+- [Sublime Text](http://www.sublimetext.com) (platformfüggetlen, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, ingyenes).
+- Bonyolulabb, de sokoldalú kódszerkesztők: [Vim](http://www.vim.org/) és [Emacs](https://www.gnu.org/software/emacs/)
 
-## Let's not argue
+## Parttalan viták helyett
 
-The editors in the lists above are those that either I or my friends whom I consider good developers have been using for a long time and are happy with.
+A felsorolt IDE-k és szerkesztők széles körben elterjedt, hosszú évek óta használt eszközök.
 
-There are other great editors in our big world. Please choose the one you like the most.
+Számtalan egyéb, kiváló kódszerkesztő van. Válasszuk a nekünk legmegfelelőbbet!
 
-The choice of an editor, like any other tool, is individual and depends on your projects, habits, and personal preferences.
+A választott kódszerkesztő, sok más eszközhöz hasonlóan, egyéni szükségletek, szokások és személyes ízlés dolga.
