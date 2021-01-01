@@ -1,25 +1,25 @@
-# A modern mode, "use strict"
+# Modern üzemmód, "use strict"
 
-Egy hosszú ideig a JavaScript kompatibilitási hibák nélkül fejlődött. Új funkciók gyakran jelentek meg, ám a régiek viszont sosem változtak.
+A JavaScript hosszú ideig kompatibilitási nehézségek nélkül fejlődött. A nyelv új elemekkel bővült, a meglévőek pedig változatlanok voltak.
 
-Ennek nagy előnye volt, hogy a kódot bármikor is írták mindig helytálló maradt, ám viszont azzal hogy a régi dolgok sosem változtak azzal az a nagy baj, hogy bármilyen imperfekciót is ejtettek a JavaScript készítői, az örökre a nyelvben ragadt.
+A nyelv újabb verziói így kompatibilisek maradtak a korábban írt programokkal, cserébe viszont együtt kellett élni a nyelv tervezésekor hozott rossz döntésekkel.
 
-Ez volt a helyzet, míg 2009-ben meg nem jelent az ECMAScript 5 (ES5). Az ES5 sok új funkciót hozott a JS-be és sok régit is megváltoztatott. Ahoz hogy a régi kód továbbá is működőképes maradhasson, ezeknek a változtatásoknak nagy részét alapból kikapcsolták. Ezeket a funciókat egy különleges diretívával kapcsolhatjuk be, a `"use strict"`-el.
+Ez volt a tényállás, mígnem 2009-ben megjelent az ECMAScript 5 (ES5), amely nem csak bővítette a nyelvet, hanem néhol meg is változtatta a működését. Annak érdekében, hogy ezek a változások ne okozzanak gondot a régebben írt programokban, e változtatások alapértelmezetten ki vannak kapcsolva, az engedélyezésükhöz pedig egy speciális "use strict" diektívát kell elhelyezni a kódban.
 
 ## "use strict"
 
-Ez a direktíva pontosan úgy néz ki mint egy átlagos szöveg (string) objektum: `"use strict"`, vagy `'use strict'`. Mikor ezt a direktívát a szkript tetejére hejezed, akkor az a szkriptet arra utasítja, hogy a "modern módon" működjön.
+Ez a direktíva ránézésre egy átlagos szöveg (string): "use strict", vagy 'use strict'. A szkript tetejére helyezve azonban arra utasítja a JS motort, hogy a szkriptet modern üzemmódban futtassa.
 
 Példa:
 
 ```js
 "use strict";
 
-// ez a kód a modern úton fog működni
+// a kód modern üzemmódban fog működni
 ...
 ```
 
-Nemsokára külön tanulni fogunk a függvényekről (egy mód JS parancsok csoportosítására), de előre lefektethetjük, hogy a `"use strict"`-et tudjuk használni függvények elején. Ezzel azt érhetjük el, hogy csak azon a függvényen belül fusson modern módon a kód. De általában az egész szkriptre szokták használni a `"use strict"`-et.
+Hamarosan szó lesz a függvényekről (JS parancsok csoportosításának egy módja). Elöljáróban elég annyit megjegyeznünk, hogy a "use strict" egy függvény elején elhelyezve csak az adott függvényen belül engedélyezi a modern üzemmódot. Általában azonban az egész szkriptre szokták használni a "use strict"-et.
 
 ````warn header="Győződj meg róla, hogy a \"use strict\" mindig a szkript tetején van!"
 Fontos, hogy a `"use strict"` **mindig** a szkript elején legyen, különben a modern mód nem lesz bekapcsolva.
@@ -28,62 +28,61 @@ Ebben a példában a `"use strict" hibás elhelyezkedése miatt a modern mód ne
 
 ```js no-strict
 alert("valami");
-// a "use strict"-et ignorálja a kód, hacsak nem a szkript, vagy egy függvény legelején van.
-
+// az alábbi "use strict" érvénytelen -- a szkript legtetején kell elhelyezni
 "use strict";
 
-// a strict mode ki van kapcsolva
+// a strict üzemmód nincs engedélyezve
 ```
 
 A `"use strict"` felé csak kommenteket szabad tenni.
 ````
 
 ```warn header="A `use strict`-et nem lehet utólag kikapcsolni"
-Nincsen olyan direktíva, mint például egy `"no use strict"`, ami visszaállítaná a motort a régi viselkedési módra.
+Nincsen olyan direktíva, mint például egy "no use strict", ami visszaállítaná a motort az alapértelmezett üzemmódra.
 
-Ha egyszer bekapcsoltad a strict modeot, nincs visszaút.
+Ha egyszer bekapcsoltuk a strict üzemmódot, nincs visszaút.
 ```
 
-## Használat a böngészők consolejain belül
+## Használat a böngésző konzolban
 
-Ha a [fejlesztői consolet](info:devtools) használod a kódod futtatására, akkor fontos, hogy az utóbbi alapból nem használ `strict mode`-ot.
+Ha a [fejlesztői konzolt](info:devtools) használod kód futtatására, fontos tudni, hogy alapértelmezetten nem strict üzemmódot használ.
 
-Bizonyos alkalmakkor, amikor a `use strict` különbséget tesz, akkor nem kívánt eredményeket kaphatsz.
+Bizonyos esetekben a "use strict" használatával nem várt eredményeket kaphatunk.
 
-De akkor hogyan is használjuk helyesen a `use strict`-et a consoleban?
+De egyáltalán hogyan használjuk a use strict-et a konzolban?
 
-Először is, megpróbálhatod a `Shift+Enter` gombok lenyomásával több sorba írni a kódot, majd az egész legetetejére odatenni a `use strict`-et. Az utóbbi valahogy így fog kinézni:
+Először próbáljuk meg a Shift+Enter gombok lenyomásával több sorba írni a kódot, majd a legelejére odatenni a use strict-et. Valahogy így:
 
 ```js
-'use strict'; <Shift+Enter, hogy új sort kezdj>
+'use strict'; <Shift+Enter, hogy új sort kezdjünk>
 //  ...a kódod
-<Nyomd meg az entert a futtatáshoz>
+<Nyomjunk entert a futtatáshoz>
 ```
 
 Ez a legtöbb böngészőben (mint például a Chrome vagy a Firefox) működik.
 
-Ha esetleg mégse (például egy régi böngészőben), akkor van egy csúnya, de megbízható megoldás a `use strict` használatára. Egy ilyesmi kód blokkra lesz szükségünk:
+Ha ez nem működne (például régi böngészőben), akkor egy megbízható megoldás az alábbi konstrukció használata:
 
 ```js
 (function() {
   'use strict';
 
-  // ...a kód hátralévő része...
+  // ...a futtatandó kódunk...
 })()
 ```
 
 ## Használjuk-e a "use strict"-et?
 
-Ez a kérdés, míg először eléggé egyértelműnek hangzik, a valóságban nem az.
+Habár a kérdés egyértelműnek hangzik, nem az.
 
-Ugye, egyesek azt ajánlanák, hogy használd előszeretettel a `"use strict"`-et ...De tudod mi itt a menő dolog?
+Okkal gondolhatnánk, hogy mindig érdemes használni a "use strict"-et, de erre nincs szükség.
 
-A modern JavaScript támogat olyanokat mint például a "class"-ek és a "module"-ok (majd azokat is tanulni fogjuk), amik automatikusan engedélyezik a `"use strict"`-et. Tehát ha ilyenek vannak a kódunkban, a `"use strict"`-et nyugodtan nélkülözhetjük.
+A modern JavaScript egyes nyelvi elemei, mint az osztály (class) és a modul (module) - ezeket később részletezzük - alapértelmezetten strict üzemmódban futnak, így ezeknek a nyelvi elemeknek a használatakor a "use strict" elhagyható.
 
-**Tehát egyelőre a `"use strict";` az csak egy kis extra a szkriptjeink elején. Később, amikor a kódunk tele lesz modulokkal és classokkal, már nyugodtan kihagyhatjuk a `"use strict"`-et.**
+**Egyelőre jó, ha használjuk a "use strict"-et, de később, amikor a kódunk modulokból és osztályokból áll, elhagyhatjuk.**
 
 Jelenleg, az alapok miatt jó tudni a `use strict` létezéséről. 
 
 A következő fejezetekben tanulunk majd egy kicsit a nyelvi funckiókról és az új és régi módok közti különbségekről. Szerencsénkre az utóbbiakból nincsen sok, és azok amik vannak azok is csak a mi dolgunkat fogják könnyíteni.
 
-Az ebben a fejezetben lévő példák mind elvárják a "strict mode" használatát, hacsak ennek az állításnak hamisságát nem fejeztük ki előre.
+Az ebben a fejezetben lévő példák, ha nincs másként feltüntetve, strict üzemmódot feltételeznek.
