@@ -111,7 +111,11 @@ Néhány példa:
 - [Flow](http://flow.org/): szintén a szigorúbb típusosságot valósítja meg, de a TypeScripttől eltérő módon. A Facebook fejlesztése.
 - [Dart](https://www.dartlang.org/): önálló nyelv, saját, böngészőn kívüli motorral. JavaScriptté alakítható. A Google fejlesztése.
 - [Brython](https://brython.info/) is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
+<<<<<<< HEAD
 - [Brython](https://brython.info/) Pythonban írt programkódot JavaScriptté alakító *transpiler*.
+=======
+- [Kotlin](https://kotlinlang.org/docs/js-overview.html) is a modern, concise and safe programming language that can target the browser or Node.
+>>>>>>> 039716de8a96f49b5fccd7aed5effff2e719dfe5
 
 A fentieken túl számos más JavaScripten alapuló nyelv létezik. Még akkor is, ha egy JavaScriptté alakítandó nyelvvel dolgozunk, mindenképpen érdemes alaposan ismerni a JavaScriptet, hogy valóban értsük, hogyan működik a programunk.
 
