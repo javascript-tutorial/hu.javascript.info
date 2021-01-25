@@ -21,7 +21,7 @@ Böngészoldali programok írásához további specifikációkkal ismerkedhetün
 
     A referencia a <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> oldalon található.
 
-    Az MDN közvetlen böngészése helyett az esetek többségében célszerűbb egy "MDN [kulcsszó]" alakú keresést indítani, például, ha a `parseInt` függvényről akarunk olvasni: <https://google.com/search?q=MDN+parseInt>.
+Az MDN közvetlen böngészése helyett az esetek többségében célszerűbb egy "MDN [kulcsszó]" alakú keresést indítani, például, ha a `parseInt` függvényről akarunk olvasni: <https://google.com/search?q=MDN+parseInt>.
 
 ## Kompatibilitási táblázatok
 
