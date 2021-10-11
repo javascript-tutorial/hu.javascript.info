@@ -8,7 +8,11 @@ Ahoz, hogy lássuk a hibákat, és egyéb hasznos információkat kaphassunk szk
 
 A legtöbb fejlesztő a Chrome és a Firefoxot preferálja, ha fejlesztésről van szó, mivel azok rendelkeznek a legjobb DevTools felülettel. Egyéb böngészők is kínálnak a Chrome és a Firefoxéhoz hasonló DevTools felületeket, de az estek nagy részében ezek közelről sem olyan jók mint az előbbiekben felsoroltak. A legtöbb fejlesztőnek van egy "kedvenc" böngészője, és egy másikra váltanak ha csak egy bizonyos böngészőre exkluzív (browser-specific) problémát találnak.
 
+<<<<<<< HEAD
 A DevToolsok szinte nélkülözhetetlenek, tekintve a sok hasznos funkciót amit kínálnak. Először azt fogjuk megtanulni, hogy ezeket az eszközöket hogyan nyissuk meg, hogyan keressünk vele hibákat és futtassunk benne JavaScript parancsokat.
+=======
+Developer tools are potent; they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+>>>>>>> 193319c963b9ba86ac7d9590f7261a36ecdcc4d2
 
 ## Google Chrome
 
