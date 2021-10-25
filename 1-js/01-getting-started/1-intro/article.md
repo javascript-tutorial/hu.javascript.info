@@ -24,11 +24,19 @@ A böngészőkbe épített JavaScript-motort *JavaScript virtuális gépnek* is 
 
 A különböző böngészőkbe épített motoroknak mind saját kódneve van, például:
 
+<<<<<<< HEAD
 - [V8](https://hu.wikipedia.org/wiki/V8_JavaScript-motor) -- Chrome és Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- Firefox.
 - ...és még egy sor másik, úgymint "Trident" és "Chakra" a különböző Internet Explorer verziókban, "ChakraCore" a Microsoft Edgeben, vagy a "Nitro" és "SquirrelFish" a Safariban.
 
 Jó, ha ismerjük a fenti fogalmakat, ugyanis vissza fognak köszönni a fejlesztőknek szánt cikkekben, például amikor arról van szó, hogy egy funkció támogatott-e a V8 által.
+=======
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome, Opera and Edge.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+
+The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome, Opera and Edge.
+>>>>>>> 3699f73b4ccb2a57ac5ef990d2687bf31ccf564c
 
 ```smart header="Hogy működnek a JavaScript-motorok?"
 
