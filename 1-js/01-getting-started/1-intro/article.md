@@ -24,11 +24,19 @@ A böngészőkbe épített JavaScript-motort *JavaScript virtuális gépnek* is 
 
 A különböző böngészőkbe épített motoroknak mind saját kódneve van, például:
 
+<<<<<<< HEAD
 - [V8](https://hu.wikipedia.org/wiki/V8_JavaScript-motor) -- Chrome és Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- Firefox.
 - ...és még egy sor másik, úgymint "Trident" és "Chakra" a különböző Internet Explorer verziókban, "ChakraCore" a Microsoft Edgeben, vagy a "Nitro" és "SquirrelFish" a Safariban.
 
 Jó, ha ismerjük a fenti fogalmakat, ugyanis vissza fognak köszönni a fejlesztőknek szánt cikkekben, például amikor arról van szó, hogy egy funkció támogatott-e a V8 által.
+=======
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome, Opera and Edge.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+
+The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome, Opera and Edge.
+>>>>>>> 0f748275e20a81700c8514f22a7cc80c4422d09c
 
 ```smart header="Hogy működnek a JavaScript-motorok?"
 
@@ -59,7 +67,11 @@ Néhány konkrét példa:
 
 ## Mire NEM képes a böngészőben futó JavaScript?
 
+<<<<<<< HEAD
 A böngészőben futó JavaScript, a felhasználó érdekében, több szempontból is korlátozva van. A cél az adatainkhoz való illetéktelen hozzáférés megakadályozása.
+=======
+JavaScript's abilities in the browser are limited for the sake of a user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+>>>>>>> 0f748275e20a81700c8514f22a7cc80c4422d09c
 
 Például:
 
@@ -84,9 +96,15 @@ Ezek a korlátozások nem léteznek a böngészőn kívül, így például a sze
 *Három* érv a JavaScript mellett:
 
 ```compare
+<<<<<<< HEAD
 + Teljeskörű HTML/CSS integráció.
 + Az egyszerű dolgok kivitelezése egyszerű.
 + Minden modern böngésző támogatja és alapértelmezetten engedélyezi a futtatását.
+=======
++ Full integration with HTML/CSS.
++ Simple things are done simply.
++ Supported by all major browsers and enabled by default.
+>>>>>>> 0f748275e20a81700c8514f22a7cc80c4422d09c
 ```
 A JavaScript az egyetlen böngésző-technológia, amely mindhárom előnnyel rendelkezik.
 
@@ -117,6 +135,12 @@ A fentieken túl számos más JavaScripten alapuló nyelv létezik. Még akkor i
 
 ## Összefoglalás
 
+<<<<<<< HEAD
 - A JavaScriptet eredetileg kizárólag böngészőben való futtatásra szánták, mára azonban számtalan egyéb környezetben alkalmazzák.
 - A JavaScript egyedülálló helyzetben van a legszélesebb körben elterjedt böngészőoldali programozási nyelvként, teljeskörű HTML és CSS integrációval.
 - Számos JavaScriptre forduló nyelv létezik. Érdemes megismerkedni velük, miután magabiztos JavaScript tudásra tettünk szert.
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language, fully integrated with HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 0f748275e20a81700c8514f22a7cc80c4422d09c
