@@ -13,7 +13,11 @@ Minden évben új ECMAScript verzió jelenik meg. A soronkövetkező verzió akt
 
 A legújabb nyelvi lehetőségekről és a szabványossá válás előtt álló, úgynevezett 3-as szintű előterjesztésekről a <https://github.com/tc39/proposals> oldalon tájékozódhatunk.
 
+<<<<<<< HEAD
 Böngészoldali programok írásához további specifikációkkal ismerkedhetünk meg a [második részben](info:browser-environment).
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> 29216730a877be28d0a75a459676db6e7f5c4834
 
 ## Leírások
 
