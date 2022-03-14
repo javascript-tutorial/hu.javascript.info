@@ -31,11 +31,18 @@ A gyakorlatban számos bővítmény (*plugin*, *extension*) áll rendelkezésre 
 
 Néhány figyelemreméltó kódszerkesztő:
 
+<<<<<<< HEAD
 - [Atom](https://atom.io/) (platformfüggetlen, ingyenes).
 - [Visual Studio Code](https://code.visualstudio.com/) (platformfüggetlen, ingyenes).
 - [Sublime Text](http://www.sublimetext.com) (platformfüggetlen, shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, ingyenes).
 - Bonyolulabb, de sokoldalú kódszerkesztők: [Vim](http://www.vim.org/) és [Emacs](https://www.gnu.org/software/emacs/)
+=======
+- [Atom](https://atom.io/) (cross-platform, free).
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 2cca9a9d09fdd45819832294225aa3721fa5a2d4
 
 ## Parttalan viták helyett
 
