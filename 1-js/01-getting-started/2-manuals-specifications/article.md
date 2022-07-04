@@ -13,7 +13,11 @@ Minden évben új ECMAScript verzió jelenik meg. A soronkövetkező verzió akt
 
 A legújabb nyelvi lehetőségekről és a szabványossá válás előtt álló, úgynevezett 3-as szintű előterjesztésekről a <https://github.com/tc39/proposals> oldalon tájékozódhatunk.
 
+<<<<<<< HEAD
 Böngészoldali programok írásához további specifikációkkal ismerkedhetünk meg a [második részben](info:browser-environment).
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
 ## Leírások
 
@@ -29,8 +33,13 @@ A JavaScript eszköztára folyamatosan bővül.
 
 Az alábbi linkeken összefoglaló táblázatokat találhatunk az egyes nyelvi funkciók különböző környezetekben való támogatottságáról:
 
+<<<<<<< HEAD
 - <http://caniuse.com> - konkrét funkciók szerinti bontás; például a modern titkosítási eljárások támogatottsága: <http://caniuse.com/#feat=cryptography>.
 - <https://kangax.github.io/compat-table> - részletes támogatottsági adatok specifikáció verzió szerint.
+=======
+- <https://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
 A mindennapi munkánk során gyakran fogjuk böngészni ezeket az oldalakat. 
 
