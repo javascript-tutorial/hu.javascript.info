@@ -12,8 +12,13 @@ Egy IDE segítségével egész projektre vonatkozó műveleteket végezhetünk. 
 
 Néhány figyelemreméltó IDE:
 
+<<<<<<< HEAD
 - [Visual Studio Code](https://code.visualstudio.com/) (patformfüggetlen, ingyenes).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (platformfüggetlen, fizetős).
+=======
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+- [WebStorm](https://www.jetbrains.com/webstorm/) (cross-platform, paid).
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 Nem keverendő össze a "Visual Studio Code" és a "Visual Studio". Utóbbi egy kizárólag Windowson elérhető, fizetős IDE, elsősorban .NET fejlesztésre. Ezzel együtt JavaScript programozásra is alkalmas, sőt, [Visual Studio Community](https://www.visualstudio.com/vs/community/) néven elérhető egy ingyenes változata is.
 
@@ -31,11 +36,18 @@ A gyakorlatban számos bővítmény (*plugin*, *extension*) áll rendelkezésre 
 
 Néhány figyelemreméltó kódszerkesztő:
 
+<<<<<<< HEAD
 - [Atom](https://atom.io/) (platformfüggetlen, ingyenes).
 - [Visual Studio Code](https://code.visualstudio.com/) (platformfüggetlen, ingyenes).
 - [Sublime Text](http://www.sublimetext.com) (platformfüggetlen, shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, ingyenes).
 - Bonyolulabb, de sokoldalú kódszerkesztők: [Vim](http://www.vim.org/) és [Emacs](https://www.gnu.org/software/emacs/)
+=======
+- [Atom](https://atom.io/) (cross-platform, free).
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 ## Parttalan viták helyett
 
