@@ -1,61 +1,61 @@
-# Variables
+# Változók
 
-Most of the time, a JavaScript application needs to work with information. Here are two examples:
-1. An online shop -- the information might include goods being sold and a shopping cart.
-2. A chat application -- the information might include users, messages, and much more.
+A JavaScript alkalmazásoknak legtöbbször információkkal kell dolgozniuk. Íme két példa: 
+1. Online bolt -- az információ tartalmazhatja az eladott árukat, és a kosarat.
+2. Chat alkalmazás -- az információ tartalmazhatja a felhasználókat, üzeneteket és még sok egyebet.
 
-Variables are used to store this information.
+Az információk tárolásához változókat használunk.
 
-## A variable
+## Változók
 
-A [variable](https://en.wikipedia.org/wiki/Variable_(computer_science)) is a "named storage" for data. We can use variables to store goodies, visitors, and other data.
+A [változó](https://hu.wikipedia.org/wiki/V%C3%A1ltoz%C3%B3_(sz%C3%A1m%C3%ADt%C3%A1stechnika))) az adatok "elnevezett tárolója". Változókat használhatunk édességek, látogatók és egyéb adatok tárolására.
 
-To create a variable in JavaScript, use the `let` keyword.
+Változó létrehozásához JavaScriptben használd a "let" kulcsszót.
 
-The statement below creates (in other words: *declares*) a variable with the name "message":
+Az alábbi utasítás létrehoz (másszóval: *deklarálás*) egy változót aminek a neve "message".
 
 ```js
 let message;
 ```
 
-Now, we can put some data into it by using the assignment operator `=`:
+Most hozzáadunk néhány adatot a `=` operátor használatával:
 
 ```js
 let message;
 
 *!*
-message = 'Hello'; // store the string
+message = 'Hello'; // eltároljuk az értéket
 */!*
 ```
 
-The string is now saved into the memory area associated with the variable. We can access it using the variable name:
+A szöveg(string) most a változóhoz tartozó memóriába kerül mentésre. Elérhetjük a használt változó nevével:
 
 ```js run
 let message;
 message = 'Hello!';
 
 *!*
-alert(message); // shows the variable content
+alert(message); // megmutatja a változó értékét
 */!*
 ```
 
-To be concise, we can combine the variable declaration and assignment into a single line:
+Az egyszerűsítés kedvéért alakítsuk át egy sorba:
 
 ```js run
-let message = 'Hello!'; // define the variable and assign the value
+let message = 'Hello!'; // definiáljuk a változót, és hozzárendelünk egy értéket
 
 alert(message); // Hello!
 ```
 
-We can also declare multiple variables in one line:
+Egy sorba több változót deklarálhatunk.
 
 ```js no-beautify
 let user = 'John', age = 25, message = 'Hello';
 ```
 
-That might seem shorter, but we don't recommend it. For the sake of better readability, please use a single line per variable.
+Egyszerűbbnek tűnhet, de nem ajánlatos. Az átláthatóság kedvéért használjunk egy változót soronként.
 
-The multiline variant is a bit longer, but easier to read:
+A többsoros változók hosszabbak, de könnyebb elolvasni:
 
 ```js
 let user = 'John';
@@ -63,14 +63,14 @@ let age = 25;
 let message = 'Hello';
 ```
 
-Some people also define multiple variables in this multiline style:
+Vannak emberek akik több változót is deklarálnak ebben a többsoros stílusban:
 ```js no-beautify
 let user = 'John',
   age = 25,
   message = 'Hello';
 ```
 
-...Or even in the "comma-first" style:
+...Vagy akár a  "comma-first" stílus:
 
 ```js no-beautify
 let user = 'John'
@@ -78,46 +78,46 @@ let user = 'John'
   , message = 'Hello';
 ```
 
-Technically, all these variants do the same thing. So, it's a matter of personal taste and aesthetics.
+A változók ugyanazt csinálják, ez csak egyéni ízlés és esztétikum kérdése.
 
-````smart header="`var` instead of `let`"
-In older scripts, you may also find another keyword: `var` instead of `let`:
+````smart header="`var` a `let` helyett"
+Néhány régebbi szkriptekben másik kulcsszót is megtalálhatunk: `var` a `let` helyett:
 
 ```js
 *!*var*/!* message = 'Hello';
 ```
 
-The `var` keyword is *almost* the same as `let`. It also declares a variable, but in a slightly different, "old-school" way.
+A `var` kulcsszó *közel* hasonló, mint a `let`. Ez is deklarál egy változót, csak egy kicsit "old-school" módon.
 
-There are subtle differences between `let` and `var`, but they do not matter for us yet. We'll cover them in detail in the chapter <info:var>.
+A `let` és `var` között vannak különbségek, de ez egyenlőre minket nem érint. Részletesseben a <info:var> fejezetben írunk.
 ````
 
-## A real-life analogy
+## Valós analógia
 
-We can easily grasp the concept of a "variable" if we imagine it as a "box" for data, with a uniquely-named sticker on it.
+Könnyen megérthetjük a "változó" fogalmát, ha az adatok "dobozonként" képzeljük el, rajta egy egyedi nevű matricával.
 
-For instance, the variable `message` can be imagined as a box labeled `"message"` with the value `"Hello!"` in it:
+Például a "message" változó elképzelhető egy "üzenet" feliratú dobozként, amelyben a "Hello!"" érték szerepel:
 
 ![](variable.svg)
 
-We can put any value in the box.
+Bármilyen értéket tehetünk a dobozba.
 
-We can also change it as many times as we want:
+Bármennyiszor megváltozhatjuk az értéket, amikor akarjuk:
 ```js run
 let message;
 
 message = 'Hello!';
 
-message = 'World!'; // value changed
+message = 'World!'; // az értéket megváltoztatjuk
 
 alert(message);
 ```
 
-When the value is changed, the old data is removed from the variable:
+Amikor az érték megváltozik, a régi adatok törlődnek a változóból:
 
 ![](variable-change.svg)
 
-We can also declare two variables and copy data from one into the other.
+Két változót is deklarálhatunk, és adatokat másolhatunk egyikből a másikba.
 
 ```js run
 let hello = 'Hello world!';
@@ -125,113 +125,113 @@ let hello = 'Hello world!';
 let message;
 
 *!*
-// copy 'Hello world' from hello into message
+// lemásoljuk a 'Hello world' értéket a hello változóból a message változóba
 message = hello;
 */!*
 
-// now two variables hold the same data
+// most mindkét változó ugyanazt az értéket kapta
 alert(hello); // Hello world!
 alert(message); // Hello world!
 ```
 
-````warn header="Declaring twice triggers an error"
-A variable should be declared only once.
+````warn header="A kétszeri deklarálás hibát vált ki"
+Egy változót csak egyszer kell deklarálni.
 
-A repeated declaration of the same variable is an error:
+Ugyanazon változó ismételt deklarálása hiba:
 
 ```js run
 let message = "This";
 
-// repeated 'let' leads to an error
+// ismétlődő 'let' hibára fut
 let message = "That"; // SyntaxError: 'message' has already been declared
 ```
-So, we should declare a variable once and then refer to it without `let`.
+Egyszer kell deklarálnunk egy változót, majd hivatkoznunk kell rá a `let` szó nélkül
 ````
 
-```smart header="Functional languages"
-It's interesting to note that there exist [functional](https://en.wikipedia.org/wiki/Functional_programming) programming languages, like [Scala](http://www.scala-lang.org/) or [Erlang](http://www.erlang.org/) that forbid changing variable values.
+```smart header="Funkcionális nyelvek"
+Érdekes megjegyezni, hogy léteznek úgynevezett tiszta [funkcionális](https://en.wikipedia.org/wiki/Functional_programming) programozási nyelvek, mint például a [Haskell]([https://en.wikipedia.org/wiki/Haskell](https://hu.wikipedia.org/wiki/Haskell_(programoz%C3%A1si_nyelv))), amelyek tiltják a változóértékek megváltoztatását.
 
-In such languages, once the value is stored "in the box", it's there forever. If we need to store something else, the language forces us to create a new box (declare a new variable). We can't reuse the old one.
+Az ilyen nyelveken, ha az értéket „a dobozban” tárolják, az örökre ott van. Ha valami mást kell tárolnunk, akkor a nyelv új doboz létrehozására kényszerít (új változó deklarálására). A régit nem tudjuk újra felhasználni.
 
-Though it may seem a little odd at first sight, these languages are quite capable of serious development. More than that, there are areas like parallel computations where this limitation confers certain benefits. Studying such a language (even if you're not planning to use it soon) is recommended to broaden the mind.
+Bár első látásra kissé furcsának tűnik, ezek a nyelvek komoly fejlődésre képesek. Ráadásul vannak olyan területek, mint például a párhuzamos számítások, ahol ez a korlátozás bizonyos előnyökkel jár.
 ```
 
-## Variable naming [#variable-naming]
+## Vátlozó elnevezése [#variable-naming]
 
-There are two limitations on variable names in JavaScript:
+A JavaScript változóneveinek két korlátozása van:
 
-1. The name must contain only letters, digits, or the symbols `$` and `_`.
-2. The first character must not be a digit.
+1. A név csak betűket, számokat vagy `$` és `_` szimbólumokat tartalmazhat.
+2. Az első karakter nem lehte szám.
 
-Examples of valid names:
+Példa létező változónevekre:
 
 ```js
 let userName;
 let test123;
 ```
 
-When the name contains multiple words, [camelCase](https://en.wikipedia.org/wiki/CamelCase) is commonly used. That is: words go one after another, each word except first starting with a capital letter: `myVeryLongName`.
+Amikor a név több szót tartalmaz, [camelCase](https://hu.wikipedia.org/wiki/CamelCase) kifejezést gyakran használják. Lényegében: a szavak egymás után következnek, minden utána lévő szó nagybetű, kivéve az első: `azEnHosszuNevem`.
 
-What's interesting -- the dollar sign `'$'` and the underscore `'_'` can also be used in names. They are regular symbols, just like letters, without any special meaning.
+Ami érdekes - a `'$'` dollárjel és az aláhúzásjel `'_'` is használható a nevekben. Szabályos szimbólumok, akárcsak a betűk, különösebb jelentés nélkül.
 
-These names are valid:
+Ezek a nevek érvényesek:
 
 ```js run untrusted
-let $ = 1; // declared a variable with the name "$"
-let _ = 2; // and now a variable with the name "_"
+let $ = 1; // deklarálunk egy változót az alábbi névvel "$"
+let _ = 2; // most egy másikat az alábbi névvel "_"
 
 alert($ + _); // 3
 ```
 
-Examples of incorrect variable names:
+Példák nem elfogadható változóneveknek:
 
 ```js no-beautify
-let 1a; // cannot start with a digit
+let 1a; // nem kezdődhet számmal
 
-let my-name; // hyphens '-' aren't allowed in the name
+let my-name; // a '-' nem engedélyezett a változó nevében
 ```
 
-```smart header="Case matters"
-Variables named `apple` and `AppLE` are two different variables.
+```smart header="Különbségek"
+Változók nevei, mint az `alma` és `alMa` két különböző változó.
 ```
 
-````smart header="Non-Latin letters are allowed, but not recommended"
-It is possible to use any language, including cyrillic letters or even hieroglyphs, like this:
+````smart header="A nem latin betűk megengedettek, de nem ajánlott"
+Bármilyen nyelv használható, beleértve a cirill betűket vagy akár a hieroglifákat is, például:
 
 ```js
 let имя = '...';
 let 我 = '...';
 ```
 
-Technically, there is no error here. Such names are allowed, but there is an international convention to use English in variable names. Even if we're writing a small script, it may have a long life ahead. People from other countries may need to read it some time.
+Technikailag nincs hiba benne. Az ilyen nevek engedélyezettek, de létezik egy nemzetközi egyezmény az angol nyelv használatára a változónevekben. Még ha egy kis szkriptet is írunk, sok ideig fennmaradhat. Az embereknek más országokból néhányszor el kell majd olvasni.
 ````
 
-````warn header="Reserved names"
-There is a [list of reserved words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), which cannot be used as variable names because they are used by the language itself.
+````warn header="Fenntartott nevek"
+Megtalálható egy [lista a fenntartott szavaknak](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), amelyek nem használhatók változónévként, mert maga a nyelv használja őket.
 
-For example: `let`, `class`, `return`, and `function` are reserved.
+Például: `let`, `class`, `return`, és a `function` fenntartottak.
 
-The code below gives a syntax error:
+Az alábbi kód szintaktikai hibát ad:
 
 ```js run no-beautify
-let let = 5; // can't name a variable "let", error!
-let return = 5; // also can't name it "return", error!
+let let = 5; // nem lehet a változó neve "let", hiba!
+let return = 5; // nem lehet a változó neve "return", hiba!
 ```
 ````
 
-````warn header="An assignment without `use strict`"
+````warn header="Egy hozzárendelés nélkül `use strict`"
 
-Normally, we need to define a variable before using it. But in the old times, it was technically possible to create a variable by a mere assignment of the value without using `let`. This still works now if we don't put `use strict` in our scripts to maintain compatibility with old scripts.
+Általában definiálnunk kell egy változót használat előtt. De a régi időkben technikailag lehetséges volt változót létrehozni pusztán az érték hozzárendelésével a "let" használata nélkül. Ez most is működik, ha nem helyezzük el a "use strict" szót a szkriptjeinkben, hogy fenntartsuk a kompatibilitást a régi szkriptekkel.
 
 ```js run no-strict
-// note: no "use strict" in this example
+// megjegyzés: nincs "use strict" használva ebben a példában
 
-num = 5; // the variable "num" is created if it didn't exist
+num = 5; // a változó "num" létrejön, ha nem létezne
 
 alert(num); // 5
 ```
 
-This is a bad practice and would cause an error in strict mode:
+Íme egy rossz gyakorlás, ami hibát fog eredményezni "strict" módban:
 
 ```js
 "use strict";
@@ -242,32 +242,31 @@ num = 5; // error: num is not defined
 ```
 ````
 
-## Constants
+## Konstans
 
-To declare a constant (unchanging) variable, use `const` instead of `let`:
+Konstans (megváltozhatatlan) deklarálásához használjuk a `const` kulcssszót a `let` helyett:
 
 ```js
 const myBirthday = '18.04.1982';
 ```
 
-Variables declared using `const` are called "constants". They cannot be reassigned. An attempt to do so would cause an error:
+A `const` használatával deklarált változókat `konstansoknak` nevezzük. Ezek nem rendelhetők mégegyszer. Egy példa, ami hibát fog visszaadni:
 
 ```js run
 const myBirthday = '18.04.1982';
 
-myBirthday = '01.01.2001'; // error, can't reassign the constant!
+myBirthday = '01.01.2001'; // hiba, nem lehetséges rendelhetni mégegyszer!
 ```
 
-When a programmer is sure that a variable will never change, they can declare it with `const` to guarantee and clearly communicate that fact to everyone.
+Mikor a programozó biztos abban, hogy a változó soha nem fog változni, akkor a `const` változóval garantálják és egyértelműen közlik mindenkivel.
 
+### Nagybetűs konstans
 
-### Uppercase constants
+Széles körben elterjedt gyakorlat, hogy konstansokat használnak álnévként olyan nehezen megjegyezhető értékekhez, amelyek a végrehajtás előtt ismertek.
 
-There is a widespread practice to use constants as aliases for difficult-to-remember values that are known prior to execution.
+Az ilyen konstansokat nagybetűkkel és aláhúzásjelekkel nevezzük el.
 
-Such constants are named using capital letters and underscores.
-
-For instance, let's make constants for colors in so-called "web" (hexadecimal) format:
+Például készítsünk konstansokat a színekhez úgynevezett "web" (hexadecimális) formátumban:
 
 ```js run
 const COLOR_RED = "#F00";
@@ -275,69 +274,70 @@ const COLOR_GREEN = "#0F0";
 const COLOR_BLUE = "#00F";
 const COLOR_ORANGE = "#FF7F00";
 
-// ...when we need to pick a color
+// ...mikor választanunk kell színt
 let color = COLOR_ORANGE;
 alert(color); // #FF7F00
 ```
 
-Benefits:
+Előnyök:
 
-- `COLOR_ORANGE` is much easier to remember than `"#FF7F00"`.
-- It is much easier to mistype `"#FF7F00"` than `COLOR_ORANGE`.
-- When reading the code, `COLOR_ORANGE` is much more meaningful than `#FF7F00`.
+- `COLOR_ORANGE` könnyebben megjegyezhető, mint a `"#FF7F00"`.
+- Könnyebben elírható a `"#FF7F00"`, mint a `COLOR_ORANGE`.
+- Mikor olvasunk egy kódot, `COLOR_ORANGE` jobban érthetőbb, mint a `#FF7F00`.
 
-When should we use capitals for a constant and when should we name it normally? Let's make that clear.
+Mikor használjunk nagybetűket konstansként és mikor nevezzük normálisan? Tegyük világossá.
 
-Being a "constant" just means that a variable's value never changes. But there are constants that are known prior to execution (like a hexadecimal value for red) and there are constants that are *calculated* in run-time, during the execution, but do not change after their initial assignment.
+A "konstans" csak azt jelenti, hogy egy változó értéke soha nem változik. Vannak azonban olyan konstansok, amelyek a végrehajtás előtt ismertek (például a vörös hexadecimális értéke), és vannak olyan állandók, amelyek futási időben, a végrehajtás során *ki vannak számítva*, de nem változnak a kezdeti hozzárendelésük után.
 
-For instance:
+Például:
 ```js
-const pageLoadTime = /* time taken by a webpage to load */;
+const pageLoadTime = /* a weboldal betöltéséhez szükséges idő */;
 ```
 
-The value of `pageLoadTime` is not known prior to the page load, so it's named normally. But it's still a constant because it doesn't change after assignment.
+A `pageLoadTime` értéke nem ismert az oldal betöltése előtt, ezért a neve normális. De ez még mindig állandó, mert a hozzárendelés után nem változik.
 
-In other words, capital-named constants are only used as aliases for "hard-coded" values.  
+Más szavakkal, a nagybetűs konstansokat csak a "kemény kódolt" értékek álneveként használják.
 
-## Name things right
+## Jó elnevezések
 
-Talking about variables, there's one more extremely important thing.
+Ha a változókról beszélünk, van még egy rendkívül fontos dolog.
 
-A variable name should have a clean, obvious meaning, describing the data that it stores.
+A változó neve legyen tiszta, egyértelmű, és leírja, hogy milyen adatokat tárol.
 
-Variable naming is one of the most important and complex skills in programming. A quick glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+A változók elnevezése az egyik legfontosabb és legösszetettebb a programozásban. Egy gyors pillantás a változónevekre felfedheti, hogy melyik kódot írta kezdő vagy tapasztalt fejlesztő.
 
-In a real project, most of the time is spent modifying and extending an existing code base rather than writing something completely separate from scratch. When we return to some code after doing something else for a while, it's much easier to find information that is well-labeled. Or, in other words, when the variables have good names.
+Egy valós projekten a legtöbb idő azzal telik, hogy módosításával és bővítésével töltik, ahelyett, hogy valami teljesen különállót írnának. 
+In a real project, most of the time is spent modifying and extending an existing code base rather than writing something completely separate from scratch. Ha visszatérünk valamilyen kódhoz, miután valami mást csináltunk egy ideig, sokkal könnyebb megtalálni a jól felcímkézett információkat. Vagy más szóval, amikor a változóknak jó neve van.
 
-Please spend time thinking about the right name for a variable before declaring it. Doing so will repay you handsomely.
+Kérlek szánj időt a jó nevekhez, mielőtt deklarálod. Ha így tesz, jócskán megtérül.
 
-Some good-to-follow rules are:
+Néhány jó betartandó szabály:
 
-- Use human-readable names like `userName` or `shoppingCart`.
-- Stay away from abbreviations or short names like `a`, `b`, `c`, unless you really know what you're doing.
-- Make names maximally descriptive and concise. Examples of bad names are `data` and `value`. Such names say nothing. It's only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
-- Agree on terms within your team and in your own mind. If a site visitor is called a "user" then we should name related variables `currentUser` or `newUser` instead of `currentVisitor` or `newManInTown`.
+- Használjon ember által olvasható neveket, pl. `userName` vagy `shoppingCart`.
+- Kerüld az olyan rövidítéseket, vagy rövid neveket, mint az `a`, `b`, `c`, ha csak nem igazán tudod, hogy mit csinál.
+- Legyen a nevek maximálisan leíró és tömör. Példák a rossz nevekre: `data`és `value`. Az ilyen nevek nem mondanak semmit. Csak akkor szabad ezeket használni, ha a kód kontextusa kivételesen nyilvánvalóvá teszi, hogy a változó melyik adatra vagy értékre hivatkozik.
+- Állapodjon meg a feltételekben a csapaton belül és saját fejében. Ha egy webhely látogatóját "user"-nek nevezik, akkor a kapcsolódó változókat `currentUser` vagy `newUser` néven kell neveznünk a `currentVisitor` vagy `newManInTown` helyett.
 
-Sounds simple? Indeed it is, but creating descriptive and concise variable names in practice is not. Go for it.
+Egyszerűen hangzik? Valóban az, de leíró és tömör változónevek létrehozása a gyakorlatban nem. Hajrá.
 
-```smart header="Reuse or create?"
-And the last note. There are some lazy programmers who, instead of declaring new variables, tend to reuse existing ones.
+```smart header="Újrahasználat, vagy új?"
+És az utolsó megjegyzés. Vannak olyan lusta programozók, akik ahelyett, hogy új változókat deklarálnának, hajlamosak a meglévő változókat újra felhasználni.
 
-As a result, their variables are like boxes into which people throw different things without changing their stickers. What's inside the box now? Who knows? We need to come closer and check.
+Ennek eredményeként a változóik olyanok, mint a dobozok, amelyekbe az emberek különféle dolgokat dobnak anélkül, hogy megváltoztatnák a matricáikat. Mi van most a dobozban? Ki tudja? Közelebb kell mennünk és ellenőrizni kell.
 
-Such programmers save a little bit on variable declaration but lose ten times more on debugging.
+Az ilyen programozók keveset takarítanak meg a változó deklarációján, de tízszer többet veszítenek a hibakeresés során.
 
-An extra variable is good, not evil.
+Egy extra változó jó, nem ördögtől való.
 
-Modern JavaScript minifiers and browsers optimize code well enough, so it won't create performance issues. Using different variables for different values can even help the engine optimize your code.
+A modern JavaScript-minifikátorok és böngészők kellően jól optimalizálják a kódot, így nem okoznak teljesítménybeli problémákat. A különböző értékekhez különböző változók használata akár a kód optimalizálását is segítheti a motornak.
 ```
 
-## Summary
+## Összegezve
 
-We can declare variables to store data by using the `var`, `let`, or `const` keywords.
+Az adatok tárolására szolgáló változókat deklarálhatunk a `var`, `let`, or `const` kulcsszavakkal.
 
-- `let` -- is a modern variable declaration.
-- `var` -- is an old-school variable declaration. Normally we don't use it at all, but we'll cover subtle differences from `let` in the chapter <info:var>, just in case you need them.
-- `const` -- is like `let`, but the value of the variable can't be changed.
+- `let` -- egy modern változó deklaráció.
+- `var` -- egy "old-school" változó deklarációja. Normális esetben egyáltalán nem haszáljuk, de a különbségeket a `let` változóval az alábbi fejezetben <info:var> fejtünk ki bővebben.
+- `const` -- hasonló, mint a `let`, de az értéke a változónak nem változtatható.
 
-Variables should be named in a way that allows us to easily understand what's inside them.
+A változókat úgy kell elnevezni, hogy könnyen megérthessük, mi van bennük.
