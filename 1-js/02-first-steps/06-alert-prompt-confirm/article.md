@@ -1,61 +1,61 @@
-# Interaction: alert, prompt, confirm
+# Interakciók: alert, prompt, confirm
 
-As we'll be using the browser as our demo environment, let's see a couple of functions to interact with the user: `alert`, `prompt` and `confirm`.
+Mivel a böngészőt fogjuk használni bemutató környezetünkként, nézzünk meg néhány függvényt a felhasználóval való interakcióhoz: `alert`, `prompt`, és `confirm`.
 
 ## alert
 
-This one we've seen already. It shows a message and waits for the user to press "OK".
+Már korábban láthattuk. Megmutatja az üzenetet, és várakozik addig, míg a felhasználó rányom, hogy "OK".
 
-For example:
+Például:
 
 ```js run
 alert("Hello");
 ```
 
-The mini-window with the message is called a *modal window*. The word "modal" means that the visitor can't interact with the rest of the page, press other buttons, etc, until they have dealt with the window. In this case -- until they press "OK".
+Az üzenetet tartalmazó kisablakot *modal window*-nak nevezzük. A szó "modal" azt jelenti, hogy a látogató nem tud az oldalon lévő többi dolgot elérni, megnyomni más gombokat, stb, amíg nem foglalkoztak az ablakkal. Ebben az esetben -- addig míg nincs megnyomva az "OK".
 
 ## prompt
 
-The function `prompt` accepts two arguments:
+A `prompt` függvénynek két paramétere lehet:
 
 ```js no-beautify
 result = prompt(title, [default]);
 ```
 
-It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel.
+Megjelenik egy modális ablak szöveges üzenettel, egy beviteli mező a látogató számára, és az OK/Mégse gombok.
 
 `title`
-: The text to show the visitor.
+: Az üzenet a látogató részére.
 
 `default`
-: An optional second parameter, the initial value for the input field.
+: Egy opcionális másodlagos paraméter, a beviteli mező kezdő értéke.
 
-```smart header="The square brackets in syntax `[...]`"
-The square brackets around `default` in the syntax above denote that the parameter is optional, not required.
+```smart header="Szögletes zárójelek a szintaxisban `[...]`"
+A fenti szintaxisban a `default` körüli szögletes zárójelek azt jelentik, hogy a paraméter opcionális, és nem kötelező.
 ```
 
-The visitor can type something in the prompt input field and press OK. Then we get that text in the `result`. Or they can cancel the input by pressing Cancel or hitting the `key:Esc` key, then we get `null` as the `result`.
+A látogató beírhat valamit a prompt beviteli mezőbe, és megnyomhatja az OK gombot. Ezután megkapjuk ezt a szöveget az `eredményben`. Vagy megszakíthatják a bevitelt a Mégse gomb megnyomásával vagy a `key:Esc` billentyű megnyomásával, ekkor a "null" értéket kapjuk az `eredményként`.
 
-The call to `prompt` returns the text from the input field or `null` if the input was canceled.
+A `prompt` hívása a beviteli mező szövegét adja vissza, vagy a `null` értéket adja vissza, ha megszakították.
 
-For instance:
+Például:
 
 ```js run
-let age = prompt('How old are you?', 100);
+let age = prompt('Hány éves vagy?', 100);
 
-alert(`You are ${age} years old!`); // You are 100 years old!
+alert(`Te ${age} éves vagy!`); // Te 100 éves vagy!
 ```
 
-````warn header="In IE: always supply a `default`"
-The second parameter is optional, but if we don't supply it, Internet Explorer will insert the text `"undefined"` into the prompt.
+````warn header="Az IE-ben: mindig szükséges a `default` rész"
+A második paraméter opcionális, de ha nem látjuk el, az Internet Explorer beszúrja az `"undefined"` szöveget a promptba.
 
-Run this code in Internet Explorer to see:
+Futtasd az IE-ben ezt a kódot:
 
 ```js run
 let test = prompt("Test");
 ```
 
-So, for prompts to look good in IE, we recommend always providing the second argument:
+Tehát, hogy a promptok jól nézzenek ki az IE-ben, javasoljuk, hogy mindig adja meg a második paramétert.
 
 ```js run
 let test = prompt("Test", ''); // <-- for IE
@@ -64,42 +64,42 @@ let test = prompt("Test", ''); // <-- for IE
 
 ## confirm
 
-The syntax:
+A szintaxis:
 
 ```js
 result = confirm(question);
 ```
 
-The function `confirm` shows a modal window with a `question` and two buttons: OK and Cancel.
+A `confirm` funkció egy modális ablakot jelenít meg egy `question` és két gombbal : OK és Mégse.
 
-The result is `true` if OK is pressed and `false` otherwise.
+Az eredmény `true`, amennyiben az OK-ra nyom, minden más esetben pedig `false`.
 
-For example:
+Például:
 
 ```js run
-let isBoss = confirm("Are you the boss?");
+let isBoss = confirm("Te vagy a főnök?");
 
-alert( isBoss ); // true if OK is pressed
+alert( isBoss ); // igaz, ha OK gombot nyomta
 ```
 
-## Summary
+## Összegzés
 
-We covered 3 browser-specific functions to interact with visitors:
+Három böngésző-specifikus függvényt ismertettünk a látogatókkal való interakció érdekében:
 
 `alert`
-: shows a message.
+: megjelenít egy üzenetet.
 
 `prompt`
-: shows a message asking the user to input text. It returns the text or, if Cancel button or `key:Esc` is clicked, `null`.
+: megjelenít egy üzenetet, és kér egy bemenetet a felhasználótól. Ez visszaadja a bemenetet, vagy ha rányom, hogy Mégse vagy `key:Esc` gombot használja, az érték `null`.
 
 `confirm`
-: shows a message and waits for the user to press "OK" or "Cancel". It returns `true` for OK and `false` for Cancel/`key:Esc`.
+: megjelenít egy üzenetet, és felhasználótól várja, hogy "OK" vagy "Mégse". Visszaadja `true` értéket OK, és `false` amennyiben Mégse vagy `key:Esc` gombot használja.
 
-All these methods are modal: they pause script execution and don't allow the visitor to interact with the rest of the page until the window has been dismissed.
+Mindezek a módszerek modálisak: szüneteltetik a szkript végrehajtását, és nem teszik lehetővé a látogató számára, hogy interakcióba lépjen az oldal többi részével, amíg az ablakot el nem zárják.
 
-There are two limitations shared by all the methods above:
+Az összes fenti módszernek két korlátozása van:
 
-1. The exact location of the modal window is determined by the browser. Usually, it's in the center.
-2. The exact look of the window also depends on the browser. We can't modify it.
+1. A modális ablak pontos helyét a böngésző határozza meg. Általában a központban van.
+2. Az ablak pontos megjelenése a böngészőtől is függ. Nem tudjuk módosítani.
 
-That is the price for simplicity. There are other ways to show nicer windows and richer interaction with the visitor, but if "bells and whistles" do not matter much, these methods work just fine.
+Ez az egyszerűség ára. Vannak más módok is a szebb ablakok megjelenítésére és a látogatóval való gazdagabb interakcióra, de ha a "harangok és sípok" nem sokat számítanak, ezek a módszerek jól működnek.
