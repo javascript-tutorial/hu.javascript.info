@@ -8,7 +8,11 @@ Ahoz, hogy lássuk a hibákat, és egyéb hasznos információkat kaphassunk szk
 
 A legtöbb fejlesztő a Chrome és a Firefoxot preferálja, ha fejlesztésről van szó, mivel azok rendelkeznek a legjobb DevTools felülettel. Egyéb böngészők is kínálnak a Chrome és a Firefoxéhoz hasonló DevTools felületeket, de az estek nagy részében ezek közelről sem olyan jók mint az előbbiekben felsoroltak. A legtöbb fejlesztőnek van egy "kedvenc" böngészője, és egy másikra váltanak ha csak egy bizonyos böngészőre exkluzív (browser-specific) problémát találnak.
 
+<<<<<<< HEAD
 A DevToolsok szinte nélkülözhetetlenek, tekintve a sok hasznos funkciót amit kínálnak. Először azt fogjuk megtanulni, hogy ezeket az eszközöket hogyan nyissuk meg, hogyan keressünk vele hibákat és futtassunk benne JavaScript parancsokat.
+=======
+Developer tools are potent; they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ## Google Chrome
 
@@ -22,7 +26,7 @@ A DevTools ablak alapból a console résznél fog megnyílni.
 
 Az utóbbinak, ha minden igaz így kell kinéznie:
 
-![chrome](chrome.png)
+![chrome](chrome.webp)
 
 A Developer Tools ablaknak a pontos kinézete Chrome verziótól függően változhat, de ha minden igaz az utóbbihoz hasonlóan fog kinézni fog..
 
@@ -49,7 +53,11 @@ A kinézetük, felületük és használatuk legtöbbször nagyon hasonló, ezér
 
 Safari, a Mac saját (Windows/Linux által nem támogatott) böngészője ezen a téren kicsit kilóg a sorból. Itt először manuálisan kell bekapcsolnunk a fejlesztői menüt, más néven a "Develop Menu"-t
 
+<<<<<<< HEAD
 Nyisd meg a preferenciák (Preferences) menüt, majd nyomj rá az "Advanced" menüpontra, aminek az alján fogsz látni egy kicsi jelölőnégyzetet, amit be is pipálhatunk.
+=======
+Open Settings and go to the "Advanced" pane. There's a checkbox at the bottom:
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ![safari](safari.png)
 
